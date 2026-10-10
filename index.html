@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101116">
+<title>The String Alphabet — Hidden Meaning Translator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain"></div>
+<header class="topbar">
+  <a class="brand" href="#" aria-label="The String Alphabet home"><span class="sigil">ᛝ</span> STRING ARCHIVE</a>
+  <nav><a href="#translator">Translator</a><a href="#dictionary">Cipher key</a><a href="#lore">The lore</a></nav>
+  <button class="quiet-button" id="themeToggle" title="Toggle light mode">◐ <span>THEME</span></button>
+</header>
+<main>
+  <section class="hero">
+    <div class="eyebrow"><span class="live-dot"></span> ARCHIVE ENTRY 001 · ORIGIN UNKNOWN</div>
+    <h1>The String <em>Alphabet</em></h1>
+  </section>
+
+  <section class="translator panel" id="translator">
+    <div class="section-head"><div><span class="kicker">01 / DECODER</span><h2>Translate a message</h2></div><span class="stamp">FIELD TOOL</span></div>
+    <div class="language-bar">
+      <button class="lang active" data-mode="english">ENGLISH</button>
+      <button class="swap" id="swapBtn" aria-label="Swap translation direction">⇄</button>
+      <button class="lang" data-mode="string">STRING ALPHABET</button>
+    </div>
+    <div class="text-panels">
+      <div class="text-panel">
+        <label for="sourceText" id="sourceLabel">YOUR MESSAGE <span>01</span></label>
+        <textarea id="sourceText" placeholder="Write something you wish you could say..." spellcheck="false">I love you</textarea>
+        <div class="input-foot"><span id="charCount">9 characters</span><button id="clearBtn" class="text-action">CLEAR ×</button></div>
+      </div>
+      <div class="text-panel output-panel">
+        <label id="outputLabel">STRING TRANSLATION <span>02</span></label>
+        <div id="outputText" class="output-text" aria-live="polite"></div>
+        <div class="input-foot"><span id="translationNote">A message between the lines.</span><button id="copyBtn" class="text-action">COPY ↗</button></div>
+      </div>
+    </div>
+    <div class="translator-bottom">
+      <div class="mode-note"><span class="tiny-sigil">✳</span><span id="modeNote">Letters become symbols. The meaning may become something more.</span></div>
+      <button class="primary-button" id="translateBtn">TRANSLATE MESSAGE <span>↗</span></button>
+    </div>
+  </section>
+
+  <section class="dictionary panel" id="dictionary">
+    <div class="section-head"><div><span class="kicker">02 / REFERENCE</span><h2>The cipher key</h2></div><span class="stamp">26 LETTERS · 10 NUMERALS</span></div>
+    <p class="section-intro">The glyphs below are the archive's current transcription. Their original shapes may have changed over centuries.</p>
+    <div id="alphabetGrid" class="alphabet-grid"></div>
+    <div class="numbers-title"><span>NUMERIC GLYPHS</span><i></i><span>0—9</span></div>
+    <div id="numberGrid" class="number-grid"></div>
+    <p class="fine-print">Punctuation and spaces are preserved so a message can still be read as a sentence. Glyphs are a stylized digital interpretation of the handwritten source.</p>
+  </section>
+
+  <section class="lore-section" id="lore">
+    <div class="lore-heading"><span class="kicker">03 / FRAGMENTS FROM THE ARCHIVE</span><h2>What the symbols remember</h2><p>Collected folklore. No origin has ever been verified.</p></div>
+    <div class="lore-grid">
+      <article class="lore-card lore-large"><span class="card-index">FRAGMENT 01</span><div class="ornament">⌁</div><h3>A language with no birthplace</h3><p>The String Alphabet has an unknown origin. Its age remains a mystery, though rumours claim it was an ancient language used to express gratitude, affection, resentment, or hatred toward a particular person, place, or idea.</p><p>It appears most often at the end of letters, messages, and passages—as if the writer has said everything they can in ordinary language, then added the truth they could not bring themselves to write.</p></article>
+      <article class="lore-card"><span class="card-index">FRAGMENT 02</span><div class="ornament">♡</div><h3>A birthday that says more</h3><p>Some believe a person's birthday, when written in String, can resemble “I love you.” The date is not simply a date: it can stand for the moment a person entered your world—and the quiet gratitude that they did.</p></article>
+      <article class="lore-card"><span class="card-index">FRAGMENT 03</span><div class="ornament">✳</div><h3>Ordinary words, hidden vows</h3><p>A favourite colour may secretly mean “You're my favourite person.” “Thank you” can mean “I will remember what you did for me.” In this language, the literal message is only the surface; the relationship between sender and reader supplies the deeper meaning.</p></article>
+      <article class="lore-card"><span class="card-index">FRAGMENT 04</span><div class="ornament">⌖</div><h3>Affection has a shadow</h3><p>The same phrase can carry opposite meanings. “Goodbye” may mean “I'll find you again,” or it may be a final warning. “I miss you” can be tenderness—or an admission that someone has become impossible to forget.</p></article>
+      <article class="lore-card lore-large"><span class="card-index">FRAGMENT 05</span><div class="ornament">〰</div><h3>Meaning depends on who reads it</h3><p>String is said to have no fixed dictionary for its emotional meanings. A simple “blue” could mean calm, distance, loyalty, or “You're my favourite person,” depending on the sender's private associations. A number may be a date, a memory, a promise, or a sentence compressed into a code.</p><p>That is why two people can translate the same message and come away with different truths. The glyphs preserve the words; the heart supplies the meaning.</p></article>
+      <article class="lore-card"><span class="card-index">FRAGMENT 06</span><div class="ornament">☾</div><h3>Why it disappeared</h3><p>One legend says it was passed between trusted people in margins, folded notes, and the final lines of letters. Another says it was never a language at all, but a ritual shared by people who understood one another. No one knows which story came first.</p></article>
+    </div>
+  </section>
+
+  <section class="examples panel">
+    <div class="section-head"><div><span class="kicker">04 / DOUBLE READINGS</span><h2>Words beneath words</h2></div></div>
+    <div class="example-list">
+      <div><span class="example-glyph">01</span><p><strong>“Thank you.”</strong><small>Surface meaning: gratitude.</small></p><span class="example-meaning">“I'll always remember your kindness.”</span></div>
+      <div><span class="example-glyph">02</span><p><strong>“My favourite colour is blue.”</strong><small>Surface meaning: a preference.</small></p><span class="example-meaning">“You're my favourite person.”</span></div>
+      <div><span class="example-glyph">03</span><p><strong>“I miss you.”</strong><small>Surface meaning: absence.</small></p><span class="example-meaning">“A part of my day still waits for you.”</span></div>
+      <div><span class="example-glyph">04</span><p><strong>“Goodbye.”</strong><small>Surface meaning: farewell.</small></p><span class="example-meaning">“I'll find you again.” — or “This is the end.”</span></div>
+    </div>
+  </section>
+
+  <footer><div class="footer-brand"><span class="sigil">ᛝ</span> THE STRING ARCHIVE</div><p>Unknown origin. Uncertain meanings. Unfinished translation.</p><span class="footer-mark">END OF ENTRY · 001</span></footer>
+
+  <section class="phrase-library panel" id="phrase-library">
+    <div class="section-head">
+      <div><span class="kicker">05 / PRIVATE DICTIONARY</span><h2>Words with a private meaning</h2></div>
+      <span class="stamp">PRIVATE DICTIONARY</span>
+    </div>
+    <p class="section-intro">Your online phrase dictionary is private to your signed-in account. Sign in to access the same phrases across your devices. Other accounts cannot read, add, edit, or delete your entries.</p>
+
+    <div class="sync-auth-box">
+      <div class="sync-status-line">
+        <span class="sync-indicator" aria-hidden="true"></span>
+        <p id="syncStatus" role="status" aria-live="polite">Private dictionary status will appear here once Supabase is configured.</p>
+      </div>
+      <div class="auth-fields">
+        <div><label for="authEmail">EMAIL</label><input id="authEmail" type="email" autocomplete="email" placeholder="you@example.com"></div>
+        <div><label for="authPassword">PASSWORD</label><input id="authPassword" type="password" autocomplete="current-password" minlength="8" placeholder="At least 8 characters"></div>
+      </div>
+      <div class="auth-actions">
+        <button class="quiet-button" id="signInBtn">SIGN IN</button>
+        <button class="quiet-button" id="signUpBtn">CREATE ACCOUNT</button>
+        <button class="quiet-button" id="signOutBtn" hidden>SIGN OUT</button>
+      </div>
+      <div class="auth-extra">
+        <button class="text-action" id="importLocalBtn" hidden>IMPORT THIS BROWSER'S PHRASES TO MY PRIVATE ACCOUNT ↗</button>
+        <p id="authHint">Create an account or sign in to keep your phrase dictionary private and synced across devices.</p>
+      </div>
+    </div>
+
+    <div class="local-privacy-note" role="note">
+      <strong>PRIVATE BY ACCOUNT</strong>
+      <p>Only the signed-in account can read or manage its phrases. Sign out to hide your online dictionary. Use only your Supabase Project URL and public publishable/anon key in this website—never a database password or secret/service-role key.</p>
+    </div>
+    <div class="phrase-editor">
+      <label for="phraseKey">PHRASE OR SENTENCE</label>
+      <textarea id="phraseKey" rows="2" placeholder="Enter a phrase or sentence"></textarea>
+      <label for="phraseMeaning">WHAT IT MEANS IN ENGLISH</label>
+      <textarea id="phraseMeaning" rows="2" placeholder="Enter its meaning in English"></textarea>
+      <div class="phrase-actions">
+        <span id="phraseStatus" aria-live="polite">Sign in to save phrases privately online.</span>
+        <button class="primary-button" id="savePhraseBtn">SAVE PHRASE <span>↗</span></button>
+      </div>
+    </div>
+    <div class="saved-phrases-head"><span>SAVED PHRASES</span><span id="savedPhraseCount">0 entries</span></div>
+    <div id="savedPhraseList" class="saved-phrase-list"></div>
+  </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
